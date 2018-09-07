@@ -18,7 +18,7 @@ let Address = 35
  * BH1750 Digital Ambient Light Sensor Package
  */
 //% weight=100 color=#000011 icon="\uf185"
-namespace BH1750 {
+namespace BH1750x {
     /**
      * set BH1750 Digital Ambient Light Sensor I2C address, default is 35
      * @param is I2C address, eg: 35
@@ -58,6 +58,5 @@ namespace BH1750 {
     export function getIntensity(): number {
         return Math.idiv(pins.i2cReadNumber(Address, NumberFormat.UInt16BE) * 5, 6)
     }
-
     on();
 }  
